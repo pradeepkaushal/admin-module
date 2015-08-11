@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * Created by pradeep.kaushal on 09/08/15.
  */
-@Entity(name = "brand_tbl")
+@Entity
 public class Brand extends  BaseEntity{
     @Id
     @GeneratedValue
@@ -16,9 +16,7 @@ public class Brand extends  BaseEntity{
     @Column
     private String brandDescription;
 
-    @OneToMany(mappedBy="brand",targetEntity=Product.class,
-            fetch=FetchType.LAZY)
-    private Set<Product> products;
+    
 
     @Override
     public Long getId() {
@@ -46,11 +44,5 @@ public class Brand extends  BaseEntity{
         this.brandDescription = brandDescription;
     }
 
-    public Set<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(Set<Product> products) {
-        this.products = products;
-    }
+  
 }

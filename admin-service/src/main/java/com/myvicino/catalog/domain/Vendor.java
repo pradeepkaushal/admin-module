@@ -11,13 +11,13 @@ public class Vendor extends BaseEntity {
     @Id
     @GeneratedValue
     private Long id;
-    @Column(name = "vendor_name")
+    @Column
     private String vendorName;
-
-    @Column(name = "vendor_addrs")
+    
+    @OneToOne(targetEntity=Address.class,fetch=FetchType.EAGER)
     private Address address;
 
-    @Column(name = "active")
+    @Column
     private Boolean active;
 
     public String getVendorName() {
