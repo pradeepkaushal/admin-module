@@ -1,0 +1,6 @@
+com/myvicino/catalog/configuration/AdminConfiguration.class
+com/myvicino/catalog/resources/AdminResource.class
+com/myvicino/catalog/application/AdminApplication.class
+com/myvicino/catalog/modal/Hello.class
+com/myvicino/catalog/core/Template.class
+com/myvicino/catalog/healthcheck/TemplateHealthCheck.class
